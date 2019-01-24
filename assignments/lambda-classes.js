@@ -25,9 +25,15 @@ class Instructors extends Person {
     grade(student, subject){
         console.log(`${student.name} receives a perfect score on ${subject}!`)
     };
-    grade(student){
-        console.log(`${this.name} changes ${student.name}'s grade to ${student.grade += Math.random()*10}`)
-    };
+    changeGrade(student){
+        if(.5 > Math.random()){ 
+            let newGrade=student.currentGrade + 20;
+            student.currentGrade=newGrade;
+        } else {
+            let newGrade=student.currentGrade -20;
+            student.currentGrade=newGrade;
+        }
+    };    
 }
 
 
@@ -37,7 +43,7 @@ class Student extends Person {
         this.previousBackground=stuobj.previousBackground;
         this.className=stuobj.className;
         this.favSubjects=stuobj.favSubjects;
-        this.grade=stuobj.grade;
+        this.currentGrade=stuobj.currentGrade;
     }
     listsSubjects(){
         this.favSubjects.forEach(function(x){
@@ -109,8 +115,8 @@ const johnny=new Student(
       gender: "Male",
       previousBackground: "Accounting",
       className: "WEB17",
-      favSubjects: ["Data Science", "Python"]
-      grade: 0
+      favSubjects: ["Data Science", "Python"],
+      currentGrade: 0
       }
 
 );
@@ -123,8 +129,8 @@ const sharraitu=new Student(
       gender: "???",
       previousBackground: "Exploring occult secrets",
       className: "WEB17",
-      favSubjects: ["JavaScript", "User Interface"]
-      grade: 0
+      favSubjects: ["JavaScript", "User Interface"],
+      currentGrade: 0
       }
 
 );
