@@ -25,6 +25,9 @@ class Instructors extends Person {
     grade(student, subject){
         console.log(`${student.name} receives a perfect score on ${subject}!`)
     };
+    grade(student){
+        console.log(`${this.name} changes ${student.name}'s grade to ${student.grade += Math.random()*10}`)
+    };
 }
 
 
@@ -34,15 +37,25 @@ class Student extends Person {
         this.previousBackground=stuobj.previousBackground;
         this.className=stuobj.className;
         this.favSubjects=stuobj.favSubjects;
+        this.grade=stuobj.grade;
     }
     listsSubjects(){
-        console.log(`${this.favSubjects}`)
+        this.favSubjects.forEach(function(x){
+          console.log(x);
+        })
     };
     PRAssignment(subject){
         console.log(`${this.name} has submitted a pull request for ${subject}.`)
     };
     sprintChallenge(subject){
         console.log(`${this.name} has begun a sprint challenge on ${subject}`)
+    };
+    graduate(){
+        if (this.grade >= 100){
+            console.log(`${this.name} graduated Lambda School!`)
+        } else {
+            console.log(`${this.name} has more to learn!`)
+        };
     };
 }
 
@@ -96,7 +109,8 @@ const johnny=new Student(
       gender: "Male",
       previousBackground: "Accounting",
       className: "WEB17",
-      favSubjects: "Data Science"
+      favSubjects: ["Data Science", "Python"]
+      grade: 0
       }
 
 );
@@ -109,7 +123,8 @@ const sharraitu=new Student(
       gender: "???",
       previousBackground: "Exploring occult secrets",
       className: "WEB17",
-      favSubjects: "JavaScript"
+      favSubjects: ["JavaScript", "User Interface"]
+      grade: 0
       }
 
 );
@@ -143,4 +158,5 @@ kat.debugsCode(johnny, "CSS")
 johnny.sprintChallenge("Redux");
 billy.grade(sharraitu, "Authentication");
 barney.standUp("Web17_barney");
+
 
