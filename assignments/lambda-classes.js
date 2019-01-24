@@ -12,7 +12,7 @@ class Person {
     };
 }
 
-class Instructor extends Person {
+class Instructors extends Person {
     constructor(insobj){
         super(insobj);
         this.specialty=insobj.specialty;
@@ -36,6 +36,27 @@ class Student extends Person {
         this.favSubjects=stuobj.favSubjects;
     }
     listsSubjects(){
-        console.log()
+        console.log(`${this.favSubjects}`)
+    };
+    PRAssignment(subject){
+        console.log(`${this.name} has submitted a pull request for ${subject}.`)
+    };
+    sprintChallenge(subject){
+        console.log(`${this.name} has begun a sprint challenge on ${subject}`)
+    };
+}
+
+
+class ProjectManagers extends Instructors{
+    constructor(proobj){
+        super(proobj);
+        this.gradClassName=proobj.gradClassName;
+        this.favInstructor=proobj.favInstructor;
     }
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @channel standy times!`)
+    };
+    debugsCode(student, subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`)
+    };
 }
