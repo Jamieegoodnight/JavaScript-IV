@@ -137,3 +137,10 @@ const kat=new ProjectManagers(
       }
 
 );
+
+barney.speak();
+kat.debugsCode(johnny, "CSS")
+johnny.sprintChallenge("Redux");
+billy.grade(sharraitu, "Authentication");
+barney.standUp("Web17_barney");
+
