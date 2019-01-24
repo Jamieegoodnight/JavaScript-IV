@@ -57,7 +57,7 @@ class Student extends Person {
         console.log(`${this.name} has begun a sprint challenge on ${subject}`)
     };
     graduate(){
-        if (this.grade >= 100){
+        if (this.currentGrade >= 100){
             console.log(`${this.name} graduated Lambda School!`)
         } else {
             console.log(`${this.name} has more to learn!`)
