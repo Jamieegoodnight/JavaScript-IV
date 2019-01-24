@@ -116,7 +116,7 @@ const johnny=new Student(
       previousBackground: "Accounting",
       className: "WEB17",
       favSubjects: ["Data Science", "Python"],
-      currentGrade: 0
+      currentGrade: 80
       }
 
 );
@@ -130,7 +130,7 @@ const sharraitu=new Student(
       previousBackground: "Exploring occult secrets",
       className: "WEB17",
       favSubjects: ["JavaScript", "User Interface"],
-      currentGrade: 0
+      currentGrade: 60
       }
 
 );
