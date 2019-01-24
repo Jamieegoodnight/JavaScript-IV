@@ -60,3 +60,80 @@ class ProjectManagers extends Instructors{
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`)
     };
 }
+
+
+const tina=new Instructors(
+    {
+      name: "Tina",
+      age: "33",
+      location: "Orlando, FL",
+      gender: "Female",
+      specialty: "Making animations",
+      favLanguage: "CSS",
+      catchPhrase: "Whoa-oa-oa!"
+
+    }
+);
+
+const billy=new Instructors(
+    {
+      name: "Billy",
+      age: "26",
+      location: "Anchorage, AK",
+      gender: "Male",
+      specialty: "SEO",
+      favLanguage: "HTML",
+      catchPhrase: "That's cool!"
+
+    }
+);
+
+const johnny=new Student(
+    {
+      name: "Johnny",
+      age: "21",
+      location: "Columbus, OH",
+      gender: "Male",
+      previousBackground: "Accounting",
+      className: "WEB17",
+      favSubjects: "Data Science"
+      }
+
+);
+
+const sharraitu=new Student(
+    {
+      name: "Sharra Itu",
+      age: "4,335",
+      location: "Ancient Babylon",
+      gender: "???",
+      previousBackground: "Exploring occult secrets",
+      className: "WEB17",
+      favSubjects: "JavaScript"
+      }
+
+);
+
+const barney=new ProjectManagers(
+    {
+      name: "Barney",
+      age: "39",
+      location: "NY, NY",
+      gender: "Male",
+      gradClassName: "WEB02",
+      favInstructor: "Tina"
+      }
+
+);
+
+const kat=new ProjectManagers(
+    {
+      name: "Kat",
+      age: "19",
+      location: "Los Angeles, CA",
+      gender: "Female",
+      gradClassName: "WEB10",
+      favInstructor: "Billy"
+      }
+
+);
